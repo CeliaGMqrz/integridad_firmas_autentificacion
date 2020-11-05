@@ -16,7 +16,7 @@ celiagm@debian:~/Descargas$ sha256sum debian-10.6.0-amd64-netinst.iso
 
 Lo comparamos con el que viene en la página:
 
-![sha256sum.png]()
+![sha256sum.png](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/capturas/sha256sum.png)
 
 Y es correcto.
 
@@ -26,7 +26,7 @@ cb74dcb7f3816da4967c727839bdaa5efb2f912cab224279f4a31f0c9e35f79621b32afe390195d5
 ```
 Lo comparamos con el que viene en la página:
 
-![sha512sum.png]()
+![sha512sum.png](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/capturas/sha512sum.png)
 
 Y es correcto.
 
