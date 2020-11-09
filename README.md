@@ -1,6 +1,6 @@
 # Integridad, firmas y autentificación
 
-![candado.jpg](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/capturas/candado.jpg)
+![candado.png](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/capturas/candado.png)
 
 * Tarea 1: [Firmas electrónicas](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/firmas_electronicas.md)
 * Tarea 2: [Correo seguro con evolution/thunderbird](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/t2_correo.md)
