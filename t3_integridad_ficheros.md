@@ -95,3 +95,5 @@ gpg:          No hay indicios de que la firma pertenezca al propietario.
 Huellas dactilares de la clave primaria: DF9B 9C49 EAA9 2984 3258  9D76 DA87 E80D 6294 BE9B
 
 ```
+
+* Tarea 4: [Integridad y autenticidad (apt secure)](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/t4_aptsecure.md)

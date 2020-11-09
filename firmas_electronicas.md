@@ -297,3 +297,5 @@ gpg: Firma correcta de "Álvaro Vaca Ferreras <avacaferreras@gmail.com>" [total]
 
 ```
 
+* Tarea 2: [Correo seguro con evolution/thunderbird](https://github.com/CeliaGMqrz/integridad_firmas_autentificacion/blob/main/t2_correo.md)
+
