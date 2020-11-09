@@ -2,12 +2,12 @@
 
 Cuando nos instalamos un paquete en nuestra distribución linux tenemos que asegurarnos que ese paquete es legítimo. Para conseguir este objetivo se utiliza criptografía asimétrica, y en el caso de Debian a este sistema se llama apt secure. Esto lo debemos tener en cuenta al utilizar los repositorios oficiales. Cuando añadamos nuevos repositorios tendremos que añadir las firmas necesarias para confiar en que los paquetes son legítimos y no han sido modificados.
 
-1. ¿Qué software utiliza apt secure para realizar la criptografía asimétrica?
+**1. ¿Qué software utiliza apt secure para realizar la criptografía asimétrica?**
 
 apt utiliza unos fuertes mecanismos de seguridad basado en el conocido software de cifrado GPG para verificar que los paquetes distribuidos por los servidores réplica de Debian son los mismos que los que subieron los desarrolladores de Debian.
 
 
-2. ¿Para que sirve el comando apt-key? ¿Qué muestra el comando apt-key list?
+**2. ¿Para que sirve el comando apt-key? ¿Qué muestra el comando apt-key list?**
 
 Sirve para gestionar las claves de APT que usa pra autenticar paquetes. Los paquetes autenticados mediante estas claves se consideran de confianza.
 
@@ -98,12 +98,12 @@ uid        [desconocida] Microsoft (Release signing) <gpgsecurity@microsoft.com>
 ```
 
 
-3. En que fichero se guarda el anillo de claves que guarda la herramienta apt-key?
+**3. En que fichero se guarda el anillo de claves que guarda la herramienta apt-key?**
 
 Se guarda en el fichero **/etc/apt/trusted.gpg**
 
 
-4. ¿Qué contiene el archivo Release de un repositorio de paquetes?. ¿Y el archivo Release.gpg?. Puedes ver estos archivos en el repositorio http://ftp.debian.org/debian/dists/Debian10.1/. Estos archivos se descargan cuando hacemos un apt update.
+**4. ¿Qué contiene el archivo Release de un repositorio de paquetes?. ¿Y el archivo Release.gpg?. Puedes ver estos archivos en el repositorio http://ftp.debian.org/debian/dists/Debian10.1/. Estos archivos se descargan cuando hacemos un apt update.**
 
 
 El archivo **Release** de un repositorio de paquetes contiene la lista de paquetes con sus respectivas versiones. 
@@ -115,7 +115,7 @@ Recordamos que:
 Con **apt-key**, para poder añadir una clave nueva primero necesita descargarla (debería asegurarse de que está usando un canal de comunicación seguro cuando la consiga), se ejecuta apt-key y después se ejecuta apt-get update para que apt descargue y compruebe los ficheros InRelease o Release.gpg de los archivos de paquetes configurados.
 
 
-5. Explica el proceso por el cual el sistema nos asegura que los ficheros que estamos descargando son legítimos.
+**5. Explica el proceso por el cual el sistema nos asegura que los ficheros que estamos descargando son legítimos.**
 
 Este proceso si nos referimos a apt, el cuál utilizamos normalmente para descargar e instalar paquetes, consta de una cadena de confianza desde el archivo apt hasta el usuario final. **apt-secure** es el último en esta cadena. Confiar en un archivo no significa que los paquetes no contengan código malicioso, pero sí se confía en el responsable del archivo, el cuál es el que asegura la integridad del mismo.
 
@@ -125,7 +125,7 @@ Una vez que el paquete enviado se ha verificado e incluido en el archivo, se eli
 
 El **usuario final** puede comprobar la firma del fichero '**Release**', extraer la **suma de control** de un paquete de él y compararlo con la suma de control del paquete descargado manualmente, o depender de la comprobación automática de **APT**.
 
-6. Añade de forma correcta el repositorio de virtualbox añadiendo la clave pública de virtualbox como se indica en la documentación.
+**6. Añade de forma correcta el repositorio de virtualbox añadiendo la clave pública de virtualbox como se indica en la documentación.**
 
 Puedes ver esta tarea en [este link](https://unbitdeinformacioncadadia.netlify.app/posts/2020/10/instalaci%C3%B3n-de-virtualbox-en-debian-buster/) en mi blog estático.
 
