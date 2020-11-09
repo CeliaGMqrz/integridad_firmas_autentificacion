@@ -4,18 +4,18 @@ Vamos a estudiar como la criptografía nos ayuda a cifrar las comunicaciones que
 
 **1. Explica los pasos que se producen entre el cliente y el servidor para que el protocolo cifre la información que se transmite? ¿Para qué se utiliza la criptografía simétrica? ¿Y la asimétrica?**
 
-Existe la criptografía simétrica en la que, el cliente y el servidor comparten la misma clave y antes de poder comunicarse deben ponerse de acuerdo en el valor de la clave. Podemos cifrar con claves simétricas con *openssl* y *gpg*.
+Existe la criptografía **simétrica** en la que, el cliente y el servidor comparten la misma clave y antes de poder comunicarse deben ponerse de acuerdo en el valor de la clave. Podemos cifrar con claves simétricas con *openssl* y *gpg*.
 
 Las claves simétricas se utilizan para cifrar toda la comunicación durante una sesión SSH. Tanto el cliente como el servidor derivan la clave secreta utilizando un método acordado, y la clave resultante nunca se revela a terceros. El proceso de creación de una clave simétrica se lleva a cabo mediante un algoritmo de intercambio de claves.
 
-Sin embargo, la criptografía asimétrica, el cliente y el servidor no comparten clave secreta. La clave de encriptación es pública y es conocida por ambos. La clave para desencriptar es secreta y privada, sólo la conoce el receptor. En otras palabras, el cliente y el servidor tienen dos claves cada uno, la pública se usa para encriptar y la privada se usa para desencriptar.
+Sin embargo, la criptografía **asimétrica**, el cliente y el servidor no comparten clave secreta. La clave de encriptación es pública y es conocida por ambos. La clave para desencriptar es secreta y privada, sólo la conoce el receptor. En otras palabras, el cliente y el servidor tienen dos claves cada uno, la pública se usa para encriptar y la privada se usa para desencriptar.
 
 
 **2. Explica los dos métodos principales de autentificación: por contraseña y utilizando un par de claves públicas y privadas.**
 
-El método de autentificación por contraseña es un sistema tradicional, en el que el usuario entra al sistema poniendo su nombre de usuario y su contraseña. La contraseña se aloja en el fichero /etc/passwd en el caso de Debian. Para cifrar las claves de acceso de los usuarios el sistema emplea un criptosistema irreversible que utiliza la función estándar de C crypt, basada en el algoritmo DES. Cuando el usuario intenta entrar con su contraseña el sistema compara la clave con la que está alojada en el fichero passwd, si coinciden el usuario puede entrar en el sistema.
+El método de autentificación por **contraseña** es un sistema tradicional, en el que el usuario entra al sistema poniendo su nombre de usuario y su contraseña. La contraseña se aloja en el fichero /etc/passwd en el caso de Debian. Para cifrar las claves de acceso de los usuarios el sistema emplea un criptosistema irreversible que utiliza la función estándar de C crypt, basada en el algoritmo DES. Cuando el usuario intenta entrar con su contraseña el sistema compara la clave con la que está alojada en el fichero passwd, si coinciden el usuario puede entrar en el sistema.
 
-El método utilizando un par de claves privada y pública consiste en que, el usuario tiene un par de claves. La pública se la pasa al servidor y la incluye en el fichero de authorized keys para que cuando haga una conexión ssh al servidor con su clave privada, haga de puzle con la pública y pueda entrar en el sistema. Igualmente en el caso de que mandemos un mensaje cifrado con la clave privada , el receptor de ese mensaje debe tener nuestra clave pública para descifrarlo. En otras palabras la clave pública es la llave que necesitan nuestros receptores para descrifrar nuestros mensajes.
+El método utilizando un **par de claves** privada y pública consiste en que, el usuario tiene un par de claves. La pública se la pasa al servidor y la incluye en el fichero de authorized keys para que cuando haga una conexión ssh al servidor con su clave privada, haga de puzle con la pública y pueda entrar en el sistema. Igualmente en el caso de que mandemos un mensaje cifrado con la clave privada , el receptor de ese mensaje debe tener nuestra clave pública para descifrarlo. En otras palabras la clave pública es la llave que necesitan nuestros receptores para descrifrar nuestros mensajes.
 
 **3. En el cliente para que sirve el contenido que se guarda en el fichero ~/.ssh/know_hosts?**
 
@@ -58,6 +58,6 @@ Nos advierte que la identificación ha cambiado, ha habido algún cambio en el f
 
 **6. ¿Qué guardamos y para qué sirve el fichero en el servidor ~/.ssh/authorized_keys?**
 
-Como hemos comentado anteriormente, en el fichero authorized_keys guardamos las claves públicas de los usuarios que van a poder acceder a nuestro sistema. Ellos acceden con su clave privada ya que la clave pública se encuetnra en ese fichero.
+Como hemos comentado anteriormente, en el fichero **authorized_keys** guardamos las claves públicas de los usuarios que van a poder acceder a nuestro sistema. Ellos acceden con su clave privada ya que la clave pública se encuetnra en ese fichero.
 
 
